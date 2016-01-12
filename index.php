@@ -35,10 +35,13 @@ and open the template in the editor.
 </html>
 <?php
 
+//add the board position property
 class Game {
-
+    
+//add constryctor, taking a position parameter
     var $position;
-
+    
+//taking a position parameter
     function __construct($squares) {
         $this->position = str_split($squares);
     }
@@ -77,6 +80,7 @@ class Game {
         return $result;
     }
 
+    //add new method inside game class
     function show_cell($which) {
         $token = $this->position[$which];
         if ($token <> '-') {
